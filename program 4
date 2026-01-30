@@ -1,0 +1,36 @@
+                                                  App.jsx:
+                                          *************************
+import { useState } from 'react'
+
+import './App.css'
+
+function App() {
+  const [color,setColor]=useState("white")
+
+  return (
+    
+      <div>
+        <h1>Color-Picker</h1>
+        <button onClick={()=>setColor("red")} >Red</button>
+        <button onClick={()=>setColor("blue")}>Blue</button>
+        <button onClick={()=>setColor("green")}>Green</button>
+        <div className='bgchange' style={{backgroundColor:color}}></div>
+        </div>
+        )
+}
+
+export default App
+                                               index.css:
+                                        ******************************
+:root {
+  text-align: center;
+
+}
+.bgchange{
+  height: 100px;
+  width: 200px;
+  border:1px solid;
+  margin-left: 470px;
+  margin-top: 20px;
+  
+}
