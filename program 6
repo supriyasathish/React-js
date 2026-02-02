@@ -1,0 +1,56 @@
+                                             RealTimeCalc.jsx:
+                                       *************************************
+
+import React, { useState } from 'react'
+
+function realtimecalc() {
+    const [num1,setNum1]=useState("");
+    const [num2,setNum2]=useState("");
+    const a=Number(num1);
+    const b=Number(num2);
+  return (
+    <div>
+     <h2>Calculator</h2>
+     <input type="number"
+     placeholder='Enter the First Value'
+     onChange={(e)=>setNum1(e.target.value)}/>
+     <input type="number"
+     placeholder='Enter the Second Value'
+     onChange={(e)=>setNum2(e.target.value)}/>
+     <div style={{heigth:"100px",
+     width:"200px",
+     border:"1px solid",
+     marginLeft:"200px",
+     marginTop:"20px",
+     textAlign:"left"
+     }}>
+        <h4>Result's</h4>
+        <p><strong>Addition:</strong>{a+b}</p>
+        <p><strong>Subtration:</strong>{a-b}</p>
+        <p><strong>Multiplicaton:</strong>{a*b}</p>
+        <p><strong>Division:</strong>
+        {b==0 ? "can't divide by zero" : a/b}
+        </p>
+    </div>
+    </div>
+  )
+}
+
+export default realtimecalc
+                                           main.jsx:
+                                *****************************
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import RealTimeCalc from './realtimecalc'
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <RealTimeCalc />
+  </StrictMode>
+)
+                                       index.css:
+                           **********************************
+:root {
+  text-align: center;
+}
