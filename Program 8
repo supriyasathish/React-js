@@ -42,7 +42,7 @@ contentBox:{
     width:"200px",
     border:"1px solid",
     borderRadius:"10px",
-    marginLeft:"400px"
+    margin:"auto"
 }
 }
 export default App
